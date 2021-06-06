@@ -155,3 +155,30 @@
 //     capitalizarPalabras('había una vez')
 //     capitalizarPalabras('OMG')
 
+//Ejercicio 10: Es subconjunto
+//Definí una función esSubconjunto que tome por parámetro dos arrays, subconjunto y conjunto, y devuelva si subconjunto es realmente subconjunto de conjunto, es decir, si todos los valores de subconjunto están en conjunto.
+
+// const esSubconjunto = (subconjunto, conjunto) => {
+
+//     if(subconjunto.length<=conjunto.length){
+    
+//         for(let i=0; i<subconjunto.length; i++){
+                
+//             if(conjunto.includes(subconjunto[i])){
+//                 alert(true)
+//             } else {            
+//                 alert(false)        
+//             }
+//         }
+//     } else {
+//         alert(false)
+//     }
+// }
+
+
+//esSubconjunto([1], [1, 2, 3])
+//esSubconjunto([1, 2, 3], [1, 2, 3, 4, 5])
+//esSubconjunto([27, 49, 54], [54, 27, 8, 27, 49])
+//esSubconjunto([1, 2, 3], [1, 2])
+//esSubconjunto([1], [2, 3, 4])
+
