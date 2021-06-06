@@ -65,3 +65,93 @@
 // }
 // invertir([1, 2, 3]) 
 // invertir([5, 7, 99, 34, 54, 2, 12])
+
+//Ejercicio 6: Remover duplicados
+//Definí una función removerDuplicados que tome por parámetros un array array y que devuelva un array con los mismos valores de array pero sin valores duplicados.
+
+// const removerDuplicados = (array) =>{
+
+// let nuevoArray= [];
+
+// for(let i=0; i<array.length; i++){
+
+// if(!nuevoArray.includes(array[i])){
+//     nuevoArray.push(array[i])
+    
+// }
+
+// }
+// console.log(nuevoArray)
+// }
+
+//VERSION CON FOR EACH
+
+// const removerDuplicados = (array)=>{
+//     let nuevoArray= [];
+//     array.forEach((numero) => { 
+       
+// if(!nuevoArray.includes(numero)){
+//     nuevoArray.push(numero)
+// }        
+//     });
+//     console.log(nuevoArray)
+// }
+
+// removerDuplicados([1, 1, 1])
+// removerDuplicados([1, 1, 2, 2, 3, 3])
+// removerDuplicados([5, 23, 8, 5, 5, 44, 23])
+
+//Ejercicio 7: Repetir letras
+//Definí una función repetirLetras que reciba como argumento un string palabra y un número entero cantidad, y devuelva una string donde cada letra de palabra esté repetida cantidad de veces.
+
+// const repetirLetras = (string, cantidad) =>{
+
+//     let nuevoString= string.split("");
+//     const repetidas = nuevoString.map(letra=>letra.repeat(cantidad))
+
+//     console.log(repetidas.join(""))
+// }
+
+//VERSION REPITE PERO DESORDENADO
+// const repetirLetras = (string, cantidad) =>{
+
+//     let nuevoString = "";
+    
+//     while(cantidad>0){
+//     //for(let i=0; i<string.length; i++){
+//         nuevoString += string;
+//         cantidad--;
+
+//     }
+        
+//     console.log(nuevoString)
+// }
+
+// repetirLetras('hola', 2)
+// repetirLetras('ada', 3)
+// repetirLetras('ah!', 5)
+// repetirLetras('basta', 1)
+
+
+//Ejercicio 8: Capitalizar palabras
+//Definí una función capitalizarPalabras tome un string y devuelva un string donde cada palabra está capitalizada (con la primera letra mayúscula). Dejá las demás letras como están.
+
+// const capitalizarPalabras = (string) => {
+
+//     let stringSplit= string.split(" ");
+//     let nuevoString=[];
+
+//     for(let palabra of stringSplit){
+    
+//         nuevoString.push(palabra.replace(palabra[0], palabra[0].toUpperCase()));
+       
+        
+//     }
+//    console.log(nuevoString.join(' '))
+    
+//     }
+    
+//     capitalizarPalabras('Esto es un título')
+//     capitalizarPalabras('había una vez')
+//     capitalizarPalabras('OMG')
+
