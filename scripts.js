@@ -7,8 +7,7 @@
 //    for(let i=0; i<cantidad; i++){
 //        valoresNuevos.push(valor);
 //    }
-       
-   
+
 //     console.log(valoresNuevos)
 // }
 // repetir('lovelace', 3)
@@ -19,9 +18,9 @@
 // const sumarImparesHasta = (numero) =>{
 //    let suma='';
 //     for(let num=0; num<=numero; num++){
-                 
+
 //               if(num%2!==0){
-              
+
 //            suma=parseInt(suma+num);            
 //        }      
 //    }
@@ -37,14 +36,14 @@
 // const crearCuentaRegresiva  = (numeroInicial) =>{
 //    let cuenta=[];
 //     for(let num=0; num<=numeroInicial; num++){
-               
-                            
+
+
 //            cuenta.push(num);
 //            cuenta.sort().reverse();
-                     
+
 //        }      
 //    console.log(cuenta)  
-   
+
 // }
 // crearCuentaRegresiva(3)
 // crearCuentaRegresiva(5)
@@ -54,14 +53,14 @@
 //Definí una función invertir que tome por parámetro un array array y que devuelva un array con los mismos valores pero en orden invertido.
 
 // const invertir   = (array) =>{
-   
+
 //     for(let i=0; i<array.length; i++){
-         
+
 //            array.reverse();
-           
+
 //        }      
 //        console.log(array)  
-   
+
 // }
 // invertir([1, 2, 3]) 
 // invertir([5, 7, 99, 34, 54, 2, 12])
@@ -77,7 +76,7 @@
 
 // if(!nuevoArray.includes(array[i])){
 //     nuevoArray.push(array[i])
-    
+
 // }
 
 // }
@@ -89,7 +88,7 @@
 // const removerDuplicados = (array)=>{
 //     let nuevoArray= [];
 //     array.forEach((numero) => { 
-       
+
 // if(!nuevoArray.includes(numero)){
 //     nuevoArray.push(numero)
 // }        
@@ -116,14 +115,14 @@
 // const repetirLetras = (string, cantidad) =>{
 
 //     let nuevoString = "";
-    
+
 //     while(cantidad>0){
 //     //for(let i=0; i<string.length; i++){
 //         nuevoString += string;
 //         cantidad--;
 
 //     }
-        
+
 //     console.log(nuevoString)
 // }
 
@@ -142,18 +141,45 @@
 //     let nuevoString=[];
 
 //     for(let palabra of stringSplit){
-    
+
 //         nuevoString.push(palabra.replace(palabra[0], palabra[0].toUpperCase()));
-       
-        
+
+
 //     }
 //    console.log(nuevoString.join(' '))
-    
+
 //     }
-    
+
 //     capitalizarPalabras('Esto es un título')
 //     capitalizarPalabras('había una vez')
 //     capitalizarPalabras('OMG')
+
+
+//Ejercicio 9: Sumar sección (50)
+//Definí una función sumarSeccion que reciba como argumento un array de números enteros array, un número entero comienzo y un número entero cantidad, y que devuelva la suma de cantidad de números de array empezando a contar desde el ítem con índice comienzo.
+
+// const sumarSeccion = (array, comienzo, cantidad) => {
+//         let sumaFinal="";
+
+//         const indexCantidad=array.indexOf(array[comienzo+cantidad-1]);
+//         let numerosSuma = array.slice(comienzo, indexCantidad+1);
+
+//         for(let i=0; i<numerosSuma.length; i++){
+
+//             sumaFinal=parseInt(sumaFinal+numerosSuma[i]);
+//             console.log(sumaFinal)
+//         }
+
+// }
+
+//sumarSeccion([2, 2, 4, 3, 10, 20, 5], 0, 3)
+//8
+//sumarSeccion([2, 2, 4, 3, 10, 20, 5], 2, 4)
+//37
+//sumarSeccion([2, 2, 4, 3, 10, 20, 5], 4, 1)
+//10
+
+
 
 //Ejercicio 10: Es subconjunto
 //Definí una función esSubconjunto que tome por parámetro dos arrays, subconjunto y conjunto, y devuelva si subconjunto es realmente subconjunto de conjunto, es decir, si todos los valores de subconjunto están en conjunto.
@@ -161,9 +187,9 @@
 // const esSubconjunto = (subconjunto, conjunto) => {
 
 //     if(subconjunto.length<=conjunto.length){
-    
+
 //         for(let i=0; i<subconjunto.length; i++){
-                
+
 //             if(conjunto.includes(subconjunto[i])){
 //                 alert(true)
 //             } else {            
@@ -181,4 +207,66 @@
 //esSubconjunto([27, 49, 54], [54, 27, 8, 27, 49])
 //esSubconjunto([1, 2, 3], [1, 2])
 //esSubconjunto([1], [2, 3, 4])
+
+
+//Ejercicio 11: Tiene bloque EN PROCESO
+//Definí una función tieneBloque que tome por parámetro un array array y devuelva si dicho array tiene un bloque de 3 o más ítems consecutivos idénticos.
+
+const tieneBloque = (array)=> {
+
+   
+
+    for(let i = 0; i<array.length; i++){
+       
+        
+        if(array[i]===array[i+1] && array[i+1]===array[i+2] || array[i]===array[i-1] && array[i]===array[i+1] || array[i]===array[i-1] && array[i]===array[i-2]) {
+        alert(true)
+
+
+        } else {
+            alert(false)
+
+        }
+
+      
+    }
+
+}
+
+tieneBloque([1, 2, 3])
+
+//tieneBloque([1, 1, 1, 2, 3])
+
+//tieneBloque([1, 2, 3, 3, 3])
+
+
+//tieneBloque([1, 2, 3, 3, 3, 8])
+
+//tieneBloque([1, 2, 2, 3, 3, 4])
+
+
+//Ejercicio 12: Es palindromo ()
+//Definí una función esPalindromo que tome una palabra y devuelva si dicha palabra es palíndroma, es decir, si puede leerse de igual manera de izquierda a derecha  que de derecha a izquierda .
+
+
+// const esPalindromo = (palabra)=> {
+
+//     let palabraAInvertir= palabra.split("");
+//     let palabraInvertida=palabraAInvertir.reverse();
+//     let invertidaAString=palabraInvertida.join("");
+//     if(invertidaAString===palabra){
+//         alert(true);
+//     } else {
+//         alert(false)
+//     }
+
+// }
+
+// esPalindromo('ada')
+
+//esPalindromo('reconocer')
+
+//esPalindromo('mama')
+
+//esPalindromo('javascript')
 
