@@ -111,6 +111,26 @@
 //     console.log(repetidas.join(""))
 // }
 
+
+//VERSION MAIA
+
+
+//  const repetirLetras = (palabra, cantidad) =>{
+
+//     let nuevoString= "";
+    
+//     for(let i = 0; i<palabra.length; i++){
+
+//         for(let j=0; j<cantidad; j++){
+//             nuevoString=nuevoString+palabra[i]; 
+
+//         }
+// alert(nuevoString)
+//     }
+    
+    
+// }
+
 //VERSION REPITE PERO DESORDENADO
 // const repetirLetras = (string, cantidad) =>{
 
@@ -212,35 +232,61 @@
 //Ejercicio 11: Tiene bloque EN PROCESO
 //Definí una función tieneBloque que tome por parámetro un array array y devuelva si dicho array tiene un bloque de 3 o más ítems consecutivos idénticos.
 
-const tieneBloque = (array)=> {
+// const tieneBloque = (array)=> {
 
-   
-
-    for(let i = 0; i<array.length; i++){
+//     for(let i = 0; i<array.length; i++){
        
         
-        if(array[i]===array[i+1] && array[i+1]===array[i+2] || array[i]===array[i-1] && array[i]===array[i+1] || array[i]===array[i-1] && array[i]===array[i-2]) {
-        alert(true)
+//         if(array[i]===array[i+1] && array[i+1]===array[i+2] || array[i]===array[i-1] && array[i]===array[i+1] || array[i]===array[i-1] && array[i]===array[i-2]) {
+//         alert(true)
 
+//         } else {
+//             alert(false)
 
-        } else {
-            alert(false)
+//         }
 
-        }
+//     }
 
-      
+// }
+
+//VERSION MATI CON CAMBIO PROPIO (break)
+
+const tieneBloque = (array)=> {
+  let anterior;
+  let vecesEncontradas= 0;
+  const veces=3;
+
+  for(const item of array){
+    if(item===anterior){
+    vecesEncontradas++;
+
+    }else{
+    vecesEncontradas=1
+    }
+  
+  
+    if(vecesEncontradas >= veces){
+        alert(true);
+        break;
+    } else {
+        alert(false)
+    }
+    anterior = item
     }
 
 }
+    
+  
 
-tieneBloque([1, 2, 3])
+
+
+//tieneBloque([1, 2, 3])
 
 //tieneBloque([1, 1, 1, 2, 3])
 
 //tieneBloque([1, 2, 3, 3, 3])
 
-
-//tieneBloque([1, 2, 3, 3, 3, 8])
+tieneBloque([1, 2, 3, 3, 3, 8])
 
 //tieneBloque([1, 2, 2, 3, 3, 4])
 
